@@ -18,7 +18,7 @@
 			"value": "managed"
 		},
 		"openshiftClusterPrefix": {
-			"value": "changeme"
+			"value": "LVRS"
 		},
 		"masterInstanceCount": {
 			"value": 3
@@ -33,10 +33,14 @@
 			"value": 128
 		},
 		"adminUsername": {
-			"value": "changeme"
+			"value": "innoadmin"
 		},
 		"openshiftPassword": {
-			"value": "changeme"
+			   "reference": {
+				  "keyVault": {
+					 "id": "/subscriptions/78a4ac81-69a7-4214-9d42-d6ede8f3efc5/resourceGroups/LV-UKS-CIO-INNO-RS1/providers/Microsoft.KeyVault/vaults/rsKeyVault-1"
+				  "secretName": "secret-1"	  
+				  },
 		},
 		"enableMetrics": {
 			"value": "false"
@@ -45,25 +49,30 @@
 			"value": "false"
 		},
 		"sshPublicKey": {
-			"value": "changeme"
+			"value": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDQxCi9+WjmUaipdzR1wPjvQ9ZSwMRI7mcnWiyp8Moc1XHaXN6z5/qsKlhLD1xK8XBZhw7EfsFi6jrRLZF9h0jcrsH19j0zR0g6jGkFgEvM8/O73D0oxEDUQnWvHZfnHXZAZeP/Eb5kInySOR3cxkWg9rWOJkznTwjXxRysI5r3N5xCt0tjWRR3fLLc2CuuD8Y6ViL4u6Dc6OuPmDDYJX+Kr2Jtz28sqDp1ZEVNU8Bzku5zG3HHtkiN4YtJQb/y/CYjKtcNRLTwjY6uZihu8LFxQYJnS1lMmTItmf7i/H0o1Q8p0kl3o7+XaId89sqA1xy5aYfBOdELwWZSUN8ujA4t richard@cc-35b0fb8-6d7c5d779-gfx4k"
 		},
 		"keyVaultResourceGroup": {
-			"value": "changeme"
+			"value": "LV-UKS-CIO-INNO-RS1"
 		},
 		"keyVaultName": {
-			"value": "changeme"
+			"value": "rsKeyVault-1"
 		},
 		"keyVaultSecret": {
-			"value": "changeme"
+			"value": "secret2"
 		},
 		"enableAzure": {
 			"value": "true"
 		},
 		"aadClientId": {
-			"value": "changeme"
+			"value": "58444a90-201a-4205-93c1-3763f70c121d"
 		},
 		"aadClientSecret": {
-			"value": "changeme"
+					"reference": {
+							"keyVault": {
+									"id": "/subscriptions/78a4ac81-69a7-4214-9d42-d6ede8f3efc5/resourceGroups/LV-UKS-CIO-INNO-RS1/providers/Microsoft.KeyVault/vaults/rsKeyVault-1"
+							},
+							"secretName": "secret-2" 
+			
 		},
 		"defaultSubDomainType": {
 			"value": "nipio"
